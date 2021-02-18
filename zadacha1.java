@@ -2,32 +2,18 @@
 public class zadacha1 {
 
 	public static void main(String[] args) {
-
-		System.out.println(evenRecursive(18));
-		System.out.println(oddRecursive(24));
+		// TODO Auto-generated method stub
+			foo(3, 4);
 		
 	}
-	
-	public static boolean evenRecursive (int n) {
-	
-		if (n == 0) {
-			return true;
-		} else if (n == 1) {
-			return false;
-		} else {
-			return evenRecursive (n - 2);
-		}
-	}
-	
-	public static boolean oddRecursive (int n) {
-		
-		if (n == 1) {
-			return true;
-		} else if (n == 0) {
-			return false;
-		} else {
-			return oddRecursive (n - 2);
-		}
-	}
 
+	 public static int foo (int x, int y)
+	    {
+	   	if (y == 0)
+	     	    return x;
+	   	else
+	     	    return foo(y, x % y);
+	    }
+
+	
 }

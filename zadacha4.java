@@ -1,28 +1,23 @@
-import java.util.Scanner;
 
 public class zadacha4 {
 
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+  
+		int[] list = {5, 3, 7, 1, 4};
+		System.out.println(average(list, 5));
+	}
 
-		System.out.println(nPowerRecursive(3, 4));
-		
+	public static double average (int[] arr, int n) {
+		return sum (arr, n, 0) / n;
 	}
 	
-
-	public static long nPowerInterative (int n, int x) {
-		long result = 1;
-		for (int i = 0; i < n; i ++) {
-			result *= x;
-		}
-		return result;
-	}
-	
-	public static long nPowerRecursive (int n, int x) {
+	public static double sum (int[] arr, int n, int result) { 
 		if (n == 0) {
-			return 1;
+			return result;
 		} else {
-			return (long) (x * nPowerRecursive(n - 1, x));
+			return sum (arr, n - 1, result + arr[n-1]);
 		}
 	}
-
+	
 }
